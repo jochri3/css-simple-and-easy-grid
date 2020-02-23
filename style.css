@@ -1,3 +1,17 @@
+#container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, minmax(250px, auto));
+    grid-gap: 5px;
+    grid-template-areas:
+        "enTete enTete enTete enTete enTete"
+        "section section section section  navigation"
+        "section section section section aside"
+        "pied pied pied pied pied"
+    ;
+}
+
 #container>* {
     background-color: #b3475c;
     padding: 40px;
@@ -5,5 +19,24 @@
     font-weight: bold;
     font-size: 1.5em;
     color: white;
-    margin: 5px;
+}
+
+header {
+    grid-area: enTete;
+}
+
+section {
+    grid-area: section;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: pied;
 }
