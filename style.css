@@ -40,3 +40,14 @@ aside {
 footer {
     grid-area: pied;
 }
+
+@media screen and (max-width:768px) {
+    #container {
+        grid-template-areas:
+            "enTete enTete enTete enTete enTete"
+            "navigation navigation navigation section section"
+            "aside aside aside aside aside"
+            "pied pied pied pied pied"
+        ;
+    }
+}
